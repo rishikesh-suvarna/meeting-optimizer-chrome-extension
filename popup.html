@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Optimizer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div id="app" class="container">
+    <h1>Meeting Optimizer</h1>
+
+    <div id="auth-section" class="auth-section">
+      <h2>Welcome to Meeting Optimizer</h2>
+      <p>Connect to your Google Calendar to automatically preload meeting links before your meetings start.</p>
+      <button id="auth-button" class="primary-button">Connect to Google Calendar</button>
+    </div>
+
+    <div id="settings-section" style="display: none;">
+      <h2>Settings</h2>
+
+      <div class="form-group">
+        <label for="minutes-before">Open meeting links</label>
+        <select id="minutes-before">
+          <option value="1">1 minute</option>
+          <option value="3">3 minutes</option>
+          <option value="5">5 minutes</option>
+          <option value="10">10 minutes</option>
+        </select>
+        <span>before start time</span>
+      </div>
+
+      <div class="form-group checkbox">
+        <input type="checkbox" id="close-after">
+        <label for="close-after">Automatically close meeting tabs after end time</label>
+      </div>
+
+      <button id="save-settings" class="primary-button">Save Settings</button>
+
+      <div class="divider"></div>
+
+      <h2>Upcoming Meetings</h2>
+      <div id="meetings-list" class="meetings-list">
+        <p class="loading">Loading upcoming meetings...</p>
+      </div>
+
+      <button id="refresh-meetings" class="secondary-button">Refresh Meetings</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

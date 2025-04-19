@@ -1,0 +1,185 @@
+:root {
+  --primary-color: #1a73e8;
+  --primary-hover: #0d66da;
+  --text-color: #202124;
+  --text-secondary: #5f6368;
+  --border-color: #dadce0;
+  --background-color: #ffffff;
+  --background-secondary: #f1f3f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  width: 350px;
+  padding: 16px;
+}
+
+h1 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.auth-section {
+  margin-bottom: 20px;
+}
+
+.auth-section p {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.form-group label {
+  margin-right: 8px;
+}
+
+.form-group.checkbox label {
+  margin-left: 8px;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+select {
+  padding: 6px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin: 0 8px;
+  background-color: var(--background-color);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 8px;
+  transition: background-color 0.2s;
+}
+
+.primary-button:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+.primary-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.secondary-button {
+  background-color: var(--background-secondary);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 12px;
+  transition: background-color 0.2s;
+}
+
+.secondary-button:hover {
+  background-color: #e8eaed;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 16px 0;
+}
+
+.meetings-list-container {
+  margin-top: 8px;
+}
+
+.meetings-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.meeting-item {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.meeting-item:last-child {
+  border-bottom: none;
+}
+
+.meeting-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.meeting-time {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.meeting-link {
+  color: var(--primary-color);
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meeting-link:hover {
+  text-decoration: underline;
+}
+
+.loading,
+.empty-state,
+.error {
+  padding: 16px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: #d93025;
+}
+
+.settings-section {
+  margin-bottom: 8px;
+}
